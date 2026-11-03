@@ -20,7 +20,7 @@
     <!-- ENCABEZADO Y MENÚ -->
     <header class="encabezado">
         <a href="#inicio" class="logo-itace" aria-label="ITACE Plantel Reynosa, inicio">
-            <img src="imagenes/ITACE.png.png" alt="Logo del ITACE Plantel Reynosa">
+            <img src="ITACE.png.png" alt="Logo del ITACE Plantel Reynosa">
         </a>
 
         <button class="menu-boton" id="menu-boton"
@@ -35,7 +35,8 @@
             <a href="#vida">Vida estudiantil</a>
             <a href="#proyectos">Proyectos</a>
             <a href="#eventos">Eventos</a>
-            <a href="#admisiones">Admisiones</a>
+<a href="#noticias">Noticias</a>
+<a href="#admisiones">Admisiones</a>
             <a href="#docentes">Docentes</a>
             <a href="#identidad">Identidad</a>
             <a href="#audio">Audio</a>
@@ -59,14 +60,14 @@
                 <h1>El futuro se construye <span>aprendiendo</span></h1>
 
                 <p>
-                    Conoce una propuesta digital dedicada a la comunidad
-                    estudiantil, la formación técnica y el talento del ITACE Reynosa.
+                    LEALTAD HONOR TRABAJO
                 </p>
 
-                <div class="botones">
+                                <div class="botones">
                     <a class="boton boton-claro" href="#carreras">Explorar carreras</a>
                     <a class="boton boton-borde" href="#conocenos">Conocer el plantel</a>
                 </div>
+            </div>
 
             <a class="bajar" href="#bienvenida" aria-label="Continuar a bienvenida">↓</a>
         </section>
@@ -214,7 +215,7 @@
 
             <div class="rejilla tres-columnas">
                 <article class="tarjeta imagen-tarjeta">
-                    <img src="imagenes/AULAS.jpg" alt="Aulas del plantel" loading="lazy">
+                    <img src="AULAS.jpg" alt="Aulas del plantel" loading="lazy">
                     <div class="tarjeta-cuerpo">
                         <h3>Aulas</h3>
                         <p>Espacios para aprender, investigar y colaborar.</p>
@@ -222,7 +223,7 @@
                 </article>
 
                 <article class="tarjeta imagen-tarjeta">
-                    <img src="imagenes/taller.jpg.jpeg" alt="Talleres de práctica" loading="lazy">
+                    <img src="taller.jpg.jpeg" alt="Talleres de práctica" loading="lazy">
                     <div class="tarjeta-cuerpo">
                         <h3>Talleres y laboratorios</h3>
                         <p>Áreas destinadas a la formación práctica.</p>
@@ -230,7 +231,7 @@
                 </article>
 
                 <article class="tarjeta imagen-tarjeta">
-                    <img src="imagenes/explanada.jpg" alt="Áreas comunes escolares" loading="lazy">
+                    <img src="explanada.jpg" alt="Áreas comunes escolares" loading="lazy">
                     <div class="tarjeta-cuerpo">
                         <h3>Áreas comunes</h3>
                         <p>Lugares de convivencia de la comunidad escolar.</p>
@@ -283,7 +284,7 @@
 
             <div class="rejilla dos-columnas">
                 <article class="tarjeta">
-                    <img src="imagenes/tecnologico.jpg" alt="Proyecto de desarrollo web" loading="lazy">
+                    <img src="tecnologico.jpg" alt="Proyecto de desarrollo web" loading="lazy">
                     <div class="tarjeta-cuerpo">
                         <span class="etiqueta-tarjeta">TECNOLOGÍA</span>
                         <h3>Desarrollo web</h3>
@@ -292,7 +293,7 @@
                 </article>
 
                 <article class="tarjeta">
-                    <img src="imagenes/feriainfantil.jpg" alt="Proyecto escolar" loading="lazy">
+                    <img src="feriainfantil.jpg" alt="Proyecto escolar" loading="lazy">
                     <div class="tarjeta-cuerpo">
                         <span class="etiqueta-tarjeta">INNOVACIÓN</span>
                         <h3>Ideas que se convierten en proyectos</h3>
@@ -305,23 +306,231 @@
             </div>
         </section>
 
-        <!-- 8. NOTICIAS -->
-        <section class="seccion" id="noticias">
-            <div class="encabezado-seccion">
-                <span class="sobrelinea">06 · INFORMACIÓN</span>
-                <h2>Noticias institucionales</h2>
-                <p>Publica solamente noticias reales con fecha e información verificada.</p>
+<!-- NOTICIAS ITACE -->
+<section class="seccion" id="noticias">
+
+    <div class="encabezado-seccion">
+        <span class="sobrelinea">ACTUALIDAD ESCOLAR</span>
+        <h2>Noticias ITACE</h2>
+        <p>
+            Conoce las actividades, proyectos, eventos y acontecimientos
+            que forman parte de nuestra comunidad educativa.
+        </p>
+    </div>
+
+    <!-- FILTROS DE NOTICIAS -->
+    <div class="filtros-noticias">
+
+        <button type="button"
+                class="filtro-noticia activo"
+                data-categoria="todas">
+            Todas
+        </button>
+
+        <button type="button"
+                class="filtro-noticia"
+                data-categoria="academicas">
+            Académicas
+        </button>
+
+        <button type="button"
+                class="filtro-noticia"
+                data-categoria="tecnologia">
+            Tecnología
+        </button>
+
+        <button type="button"
+                class="filtro-noticia"
+                data-categoria="cultura">
+            Cultura
+        </button>
+
+        <button type="button"
+                class="filtro-noticia"
+                data-categoria="deportes">
+            Deportes
+        </button>
+
+    </div>
+
+    <!-- DISTRIBUCIÓN DE NOTICIAS -->
+    <div class="noticias-layout">
+
+        <!-- NOTICIA PRINCIPAL -->
+        <article class="noticia-principal tarjeta-noticia"
+                 data-categoria="tecnologia">
+
+            <div class="imagen-noticia">
+
+                <img src="tecnologico.jpg"
+                     alt="Estudiantes trabajando en proyectos tecnológicos"
+                     loading="lazy">
+
+                <span class="etiqueta-noticia">
+                    DESTACADA
+                </span>
+
             </div>
 
-            <article class="tarjeta noticia">
-                <div>
-                    <span class="etiqueta-tarjeta">AVISO</span>
-                    <h3>Información para la comunidad estudiantil</h3>
-                    <p>Utiliza este espacio para un aviso confirmado por el plantel.</p>
-                    <small>Fecha: agrega la fecha real de publicación.</small>
+            <div class="contenido-noticia">
+
+                <span class="categoria-noticia">
+                    TECNOLOGÍA
+                </span>
+
+                <h3>
+                    La innovación tecnológica impulsa el aprendizaje
+                </h3>
+
+                <p>
+                    Los proyectos tecnológicos permiten que los estudiantes
+                    desarrollen habilidades prácticas, creatividad y
+                    conocimientos para enfrentar nuevos retos.
+                </p>
+
+                <button type="button" class="boton-noticia">
+                    Leer noticia
+                </button>
+
+                <div class="texto-completo" hidden>
+                    <p>
+                        La educación técnica representa una oportunidad
+                        para desarrollar conocimientos mediante la práctica.
+                        A través de actividades de programación, diseño,
+                        mantenimiento y tecnología, los estudiantes pueden
+                        aplicar lo aprendido en el aula y fortalecer sus
+                        habilidades para el futuro.
+                    </p>
+                </div>
+
+            </div>
+        </article>
+
+        <!-- NOTICIAS SECUNDARIAS -->
+        <div class="noticias-secundarias">
+
+            <!-- NOTICIA ACADÉMICA -->
+            <article class="noticia-secundaria tarjeta-noticia"
+                     data-categoria="academicas">
+
+                <img src="planta.jpg.jpeg"
+                     alt="Estudiantes realizando actividades académicas"
+                     loading="lazy">
+
+                <div class="contenido-noticia">
+
+                    <span class="categoria-noticia">
+                        ACADÉMICA
+                    </span>
+
+                    <h3>
+                        El aprendizaje continúa dentro y fuera del aula
+                    </h3>
+
+                    <p>
+                        Las actividades escolares fortalecen los
+                        conocimientos y habilidades de los estudiantes.
+                    </p>
+
+                    <button type="button" class="boton-noticia">
+                        Leer noticia
+                    </button>
+
+                    <div class="texto-completo" hidden>
+                        <p>
+                            Las actividades académicas permiten que los
+                            alumnos relacionen los contenidos de clase
+                            con situaciones prácticas, desarrollando
+                            responsabilidad, participación y trabajo
+                            en equipo.
+                        </p>
+                    </div>
+
                 </div>
             </article>
-        </section>
+
+            <!-- NOTICIA CULTURAL -->
+            <article class="noticia-secundaria tarjeta-noticia"
+                     data-categoria="cultura">
+
+                <img src="danza.jpg"
+                     alt="Actividad cultural escolar"
+                     loading="lazy">
+
+                <div class="contenido-noticia">
+
+                    <span class="categoria-noticia">
+                        CULTURA
+                    </span>
+
+                    <h3>
+                        La cultura fortalece nuestra identidad
+                    </h3>
+
+                    <p>
+                        Las tradiciones y expresiones culturales
+                        enriquecen la formación de los jóvenes.
+                    </p>
+
+                    <button type="button" class="boton-noticia">
+                        Leer noticia
+                    </button>
+
+                    <div class="texto-completo" hidden>
+                        <p>
+                            Conocer las tradiciones de Tamaulipas
+                            contribuye a valorar nuestras raíces.
+                            Las actividades culturales también
+                            fomentan la convivencia y el respeto
+                            por la diversidad.
+                        </p>
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- NOTICIA DEPORTIVA -->
+            <article class="noticia-secundaria tarjeta-noticia"
+                     data-categoria="deportes">
+
+                <img src="deporte.jpg"
+                     alt="Estudiantes participando en actividades deportivas"
+                     loading="lazy">
+
+                <div class="contenido-noticia">
+
+                    <span class="categoria-noticia">
+                        DEPORTES
+                    </span>
+
+                    <h3>
+                        La participación estudiantil también cuenta
+                    </h3>
+
+                    <p>
+                        Las actividades deportivas promueven la
+                        convivencia y el trabajo en equipo.
+                    </p>
+
+                    <button type="button" class="boton-noticia">
+                        Leer noticia
+                    </button>
+
+                    <div class="texto-completo" hidden>
+                        <p>
+                            La participación en actividades deportivas
+                            permite desarrollar compañerismo,
+                            disciplina, cooperación y una convivencia
+                            positiva dentro de la comunidad educativa.
+                        </p>
+                    </div>
+
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
 
         <!-- 9. EVENTOS -->
         <section class="seccion fondo-suave" id="eventos">
@@ -391,7 +600,7 @@
             <div id="listaDocentes" class="docentes-grid">
 
                 <article class="docente-card" data-busqueda="norma elena torres quiñones ciencias naturales informática it">
-                    <img src="imagenes/norma.jpg" alt="Fotografía de Norma Elena Torres Quiñones" loading="lazy">
+                    <img src="Starter pfp.jpg" alt="Fotografía de Norma Elena Torres Quiñones" loading="lazy">
                     <h3>Norma Elena Torres Quiñones</h3>
                     <p><strong>Área:</strong> Ciencias Naturales e IT.</p>
                     <p><strong>Formación:</strong> Ingeniería Química y maestría en Docencia.</p>
@@ -399,7 +608,7 @@
                 </article>
 
                 <article class="docente-card" data-busqueda="luis enrique lerma martínez conciencia histórica lengua comunicación">
-                    <img src="imagenes/lerma.jpg.jpeg" alt="Fotografía de Luis Enrique Lerma Martínez" loading="lazy">
+                    <img src="lerma.jpg.jpeg" alt="Fotografía de Luis Enrique Lerma Martínez" loading="lazy">
                     <h3>Luis Enrique Lerma Martínez</h3>
                     <p><strong>Área:</strong> Lengua y Comunicación y Conciencia Histórica.</p>
                     <p><strong>Formación:</strong> Licenciatura en Pedagogía, Ingeniería Petrolera y diplomado en Competencias Docentes.</p>
@@ -407,7 +616,7 @@
                 </article>
 
                 <article class="docente-card" data-busqueda="bertha alicia zapata aldape matemáticas">
-                    <img src="imagenes/bertha.jpg.jpeg" alt="Fotografía de Bertha Alicia Zapata Aldape" loading="lazy">
+                    <img src="bertha.jpg.jpeg" alt="Fotografía de Bertha Alicia Zapata Aldape" loading="lazy">
                     <h3>Bertha Alicia Zapata Aldape</h3>
                     <p><strong>Área:</strong> Matemáticas.</p>
                     <p><strong>Formación:</strong> Doctorado.</p>
@@ -416,7 +625,7 @@
                 </article>
 
                 <article class="docente-card" data-busqueda="carlos melecio carmona olivares diseño gráfico inglés">
-                    <img src="imagenes/nosecomo.jpg.jpeg" alt="Fotografía de Carlos Melecio Carmona Olivares" loading="lazy">
+                    <img src="nosecomo.jpg.jpeg" alt="Fotografía de Carlos Melecio Carmona Olivares" loading="lazy">
                     <h3>Carlos Melecio Carmona Olivares</h3>
                     <p><strong>Área:</strong> Diseño Gráfico e Inglés.</p>
                     <p><strong>Formación:</strong> Maestría en Educación Básica por la UPN y Licenciatura en Diseño Gráfico por la UVB.</p>
@@ -424,7 +633,7 @@
                 </article>
 
                 <article class="docente-card" data-busqueda="erik erick ramírez solís electromecánica pensamiento matemático">
-                    <img src="imagenes/erick.jpg.jpeg" alt="Fotografía de Erik Ramírez Solís" loading="lazy">
+                    <img src="erick.jpg.jpeg" alt="Fotografía de Erik Ramírez Solís" loading="lazy">
                     <h3>Erik Ramírez Solís</h3>
                     <p><strong>Formación:</strong> Licenciatura en Electromecánica y Maestría en Educación.</p>
                     <p><strong>Materia:</strong> Pensamiento Matemático.</p>
@@ -432,19 +641,19 @@
                 </article>
 
                 <article class="docente-card" data-busqueda="grecia ávalos ramos lengua comunicación">
-                    <img src="imagenes/grecia.jpg.jpeg" alt="Fotografía de Grecia Ávalos Ramos" loading="lazy">
+                    <img src="grecia.jpg.jpeg" alt="Fotografía de Grecia Ávalos Ramos" loading="lazy">
                     <h3>Grecia Ávalos Ramos</h3>
                     <p><strong>Área:</strong> Lengua y Comunicación.</p>
                 </article>
 
                 <article class="docente-card" data-busqueda="sandra catalina silva camacho comunicación">
-                    <img src="imagenes/sandra.jpg.jpeg" alt="Fotografía de Sandra Catalina Silva Camacho" loading="lazy">
+                    <img src="sandra.jpg.jpeg" alt="Fotografía de Sandra Catalina Silva Camacho" loading="lazy">
                     <h3>Sandra Catalina Silva Camacho</h3>
                     <p><strong>Área:</strong> Comunicación.</p>
                 </article>
 
                 <article class="docente-card" data-busqueda="liliana rosas pacheco pedagogía docencia educación conciencia histórica formación socioemocional lengua comunicación pensamiento filosófico">
-                    <img src="imagenes/liliana.jpg.jpeg" alt="Fotografía de Liliana Rosas Pacheco" loading="lazy">
+                    <img src="liliana.jpg.jpeg" alt="Fotografía de Liliana Rosas Pacheco" loading="lazy">
                     <h3>Liliana Rosas Pacheco</h3>
                     <p><strong>Formación:</strong> Licenciatura en Pedagogía, Maestría en Docencia y Doctorado en Educación.</p>
                     <p><strong>Materias:</strong> Conciencia Histórica, Formación Socioemocional, Lengua y Comunicación y Pensamiento Filosófico en Humanidades.</p>
@@ -452,13 +661,13 @@
                 </article>
 
                 <article class="docente-card" data-busqueda="carla valeria moran lerma ciencias sociales cultura digital karla">
-                    <img src="imagenes/karla.jpg.jpeg" alt="Fotografía de Carla Valeria Moran Lerma" loading="lazy">
+                    <img src="karla.jpg.jpeg" alt="Fotografía de Carla Valeria Moran Lerma" loading="lazy">
                     <h3>Carla Valeria Moran Lerma</h3>
                     <p><strong>Área:</strong> Ciencias Sociales y Cultura Digital.</p>
                 </article>
 
                 <article class="docente-card" data-busqueda="benjamín benjamin limón martínez informática sistemas programación inteligencia artificial cultura digital">
-                    <img src="imagenes/profelimon.jpg" alt="Fotografía de Benjamín Limón Martínez" loading="lazy">
+                    <img src="profelimon.jpg" alt="Fotografía de Benjamín Limón Martínez" loading="lazy">
                     <h3>Benjamín Limón Martínez</h3>
                     <p><strong>Formación:</strong> Informática en Sistemas.</p>
                     <p><strong>Materias:</strong> Cultura Digital, Inteligencia Artificial y Programación.</p>
@@ -468,7 +677,7 @@
                 </article>
 
                 <article class="docente-card" data-busqueda="isidro de león flores psicopedagogía pedagogía educación física premilitar">
-                    <img src="imagenes/isidro.jpg.jpeg" alt="Fotografía de Isidro de León Flores" loading="lazy">
+                    <img src="isidro.jpg.jpeg" alt="Fotografía de Isidro de León Flores" loading="lazy">
                     <h3>Isidro de León Flores</h3>
                     <p><strong>Formación:</strong> Licenciatura en Psicopedagogía y Pedagogía.</p>
                     <p><strong>Materia:</strong> Educación Física Premilitar.</p>
@@ -476,7 +685,7 @@
                 </article>
 
                 <article class="docente-card" data-busqueda="gerardo de la rosa ortega contaduría inglés">
-                    <img src="imagenes/gerardo.jpg.jpeg" alt="Fotografía de Gerardo de la Rosa Ortega" loading="lazy">
+                    <img src="gerardo.jpg.jpeg" alt="Fotografía de Gerardo de la Rosa Ortega" loading="lazy">
                     <h3>Gerardo de la Rosa Ortega</h3>
                     <p><strong>Formación:</strong> Licenciatura en Contaduría.</p>
                     <p><strong>Materia:</strong> Inglés.</p>
@@ -484,7 +693,7 @@
                 </article>
 
                 <article class="docente-card" data-busqueda="erika aidé pérez abrego ingeniería industrial sistemas educación ciencias naturales humanidades">
-                    <img src="imagenes/erika.jpg.jpeg" alt="Fotografía de Erika Aidé Pérez Abrego" loading="lazy">
+                    <img src="erika.jpg.jpeg" alt="Fotografía de Erika Aidé Pérez Abrego" loading="lazy">
                     <h3>Erika Aidé Pérez Abrego</h3>
                     <p><strong>Formación:</strong> Ingeniería Industrial en Sistemas y Maestría en Educación.</p>
                     <p><strong>Materias:</strong> Ciencias Naturales y Humanidades.</p>
@@ -492,7 +701,7 @@
                 </article>
 
                 <article class="docente-card" data-busqueda="samuel gonzales de la fuente administración empresas ebanistería pensamiento filosófico ciencias sociales estudios literarios">
-                    <img src="imagenes/samuel.jpg" alt="Fotografía de Samuel Gonzales de la Fuente" loading="lazy">
+                    <img src="Starter pfp.jpg" alt="Fotografía de Samuel Gonzales de la Fuente" loading="lazy">
                     <h3>Samuel Gonzales de la Fuente</h3>
                     <p><strong>Formación:</strong> Licenciatura en Administración de Empresas y carrera técnica en Ebanistería.</p>
                     <p><strong>Materias:</strong> Pensamiento Filosófico 1 y 3, Ciencias Sociales 1 y Estudios Literarios.</p>
@@ -500,7 +709,7 @@
                 </article>
 
                 <article class="docente-card" data-busqueda="laura esmeralda heredia blanco bióloga física química ciencias">
-                    <img src="imagenes/laura.jpg.jpeg" alt="Fotografía de Laura Esmeralda Heredia Blanco" loading="lazy">
+                    <img src="laura.jpg.jpeg" alt="Fotografía de Laura Esmeralda Heredia Blanco" loading="lazy">
                     <h3>Laura Esmeralda Heredia Blanco</h3>
                     <p><strong>Formación:</strong> Bióloga especializada en Física y Química.</p>
                     <p><strong>Materias:</strong> Ciencias 1, 3 y 5.</p>
@@ -508,7 +717,7 @@
                 </article>
 
                 <article class="docente-card" data-busqueda="felipe hernández gonzález electrónica semiconductores lengua comunicación conciencia histórica">
-                    <img src="imagenes/felipe.jpg" alt="Fotografía de Felipe Hernández González" loading="lazy">
+                    <img src="felipe.jpg" alt="Fotografía de Felipe Hernández González" loading="lazy">
                     <h3>Felipe Hernández González</h3>
                     <p><strong>Formación:</strong> Ingeniería en Electrónica.</p>
                     <p><strong>Módulo:</strong> Electrónica y Semiconductores.</p>
@@ -517,14 +726,14 @@
                 </article>
 
                 <article class="docente-card" data-busqueda="yuridia lizbeth cepeda ramos ingeniería industrial matemáticas educación innovación educativa doctorado inglés temas selectos matemáticas">
-                    <img src="imagenes/yuridia.jpg" alt="Fotografía de Yuridia Lizbeth Cepeda Ramos" loading="lazy">
+                    <img src="Starter pfp.jpg" alt="Fotografía de Yuridia Lizbeth Cepeda Ramos" loading="lazy">
                     <h3>Yuridia Lizbeth Cepeda Ramos</h3>
                     <p><strong>Formación:</strong> Ingeniería Industrial, Licenciatura en Matemáticas y Maestría en Educación e Innovación Educativa. Actualmente estudia un Doctorado en Educación.</p>
                     <p><strong>Materias:</strong> Inglés y Temas Selectos de Matemáticas 2.</p>
                 </article>
 
                 <article class="docente-card" data-busqueda="juan pablo torres adame información administrativa ciencias enseñanza programación cultura digital robótica excel">
-                    <img src="imagenes/juanito-jpg.jpeg" alt="Fotografía de Juan Pablo Torres Adame" loading="lazy">
+                    <img src="juanito-jpg.jpeg" alt="Fotografía de Juan Pablo Torres Adame" loading="lazy">
                     <h3>Juan Pablo Torres Adame</h3>
                     <p><strong>Formación:</strong> Licenciatura en Información Administrativa y Maestría en Ciencias de la Enseñanza.</p>
                     <p><strong>Materias:</strong> Programación y Cultura Digital.</p>
@@ -534,7 +743,7 @@
                 </article>
 
                 <article class="docente-card" data-busqueda="romualdo guadalupe de la cruz mantenimiento industrial instalaciones petroleras pensamiento matemático">
-                    <img src="imagenes/romualdo.jpg" alt="Fotografía de Romualdo Guadalupe de la Cruz" loading="lazy">
+                    <img src="romualdo.jpg" alt="Fotografía de Romualdo Guadalupe de la Cruz" loading="lazy">
                     <h3>Romualdo Guadalupe de la Cruz</h3>
                     <p><strong>Formación:</strong> Mantenimiento Industrial y Mantenimiento en Instalaciones Petroleras.</p>
                     <p><strong>Materia:</strong> Pensamiento Matemático 1 y 3.</p>
@@ -542,14 +751,14 @@
                 </article>
 
                 <article class="docente-card" data-busqueda="nohemí quintanilla arcos">
-                    <img src="imagenes/nohemi.jpg" alt="Fotografía de Nohemí Quintanilla Arcos" loading="lazy">
+                    <img src="Starter pfp.jpg" alt="Fotografía de Nohemí Quintanilla Arcos" loading="lazy">
                     <h3>Nohemí Quintanilla Arcos</h3>
                     <p><strong>Especialidad:</strong> Perfecta (dato proporcionado).</p>
                     <p><strong>Materia y semestre:</strong> No especificados.</p>
                 </article>
 
                 <article class="docente-card" data-busqueda="ulises solís rieboles químico farmacéutico biólogo análisis clínicos educación doctorado ciencias naturales">
-                    <img src="imagenes/ulises.jpg.jpeg" alt="Fotografía de Ulises Solís Rieboles" loading="lazy">
+                    <img src="ulises.jpg.jpeg" alt="Fotografía de Ulises Solís Rieboles" loading="lazy">
                     <h3>Ulises Solís Rieboles</h3>
                     <p><strong>Formación:</strong> Químico Farmacéutico Biólogo, maestrías en Análisis Clínicos y Educación. Actualmente estudia un Doctorado en Educación.</p>
                     <p><strong>Materias:</strong> Ciencias Naturales 1, 3 y 5.</p>
@@ -557,7 +766,7 @@
                 </article>
 
                 <article class="docente-card" data-busqueda="trinidad hernades barrera biólogo ciencias naturales experimentales tecnología">
-                    <img src="imagenes/trini.jpg" alt="Fotografía de Trinidad Hernades Barrera" loading="lazy">
+                    <img src="trini.jpg" alt="Fotografía de Trinidad Hernades Barrera" loading="lazy">
                     <h3>Trinidad Hernades Barrera</h3>
                     <p><strong>Formación:</strong> Biología.</p>
                     <p><strong>Materias:</strong> Ciencias Naturales, Experimentales y Tecnología 1, 3 y 5.</p>
@@ -565,7 +774,7 @@
                 </article>
 
                 <article class="docente-card" data-busqueda="mildred yasmín reyes norberto ingeniería química docencia temas selectos matemáticas">
-                    <img src="imagenes/mildred.jpg" alt="Fotografía de Mildred Yasmín Reyes Norberto" loading="lazy">
+                    <img src="Starter pfp.jpg" alt="Fotografía de Mildred Yasmín Reyes Norberto" loading="lazy">
                     <h3>Mildred Yasmín Reyes Norberto</h3>
                     <p><strong>Formación:</strong> Ingeniería Química y Maestría en Docencia.</p>
                     <p><strong>Materia:</strong> Temas Selectos de Matemáticas 2.</p>
@@ -579,33 +788,92 @@
             </p>
         </section>
 
-        <!-- 12. IDENTIDAD INSTITUCIONAL -->
-        <section class="seccion fondo-suave" id="identidad">
-            <div class="encabezado-seccion">
-                <span class="sobrelinea">10 · IDENTIDAD Y TRADICIÓN</span>
-                <h2>Identidad institucional</h2>
-                <p>Información sobre los símbolos y tradiciones de la institución.</p>
+       <!-- IDENTIDAD INSTITUCIONAL Y CULTURAL -->
+<section class="seccion fondo-suave" id="identidad">
+    <div class="encabezado-seccion">
+        <span class="sobrelinea">NUESTRAS RAÍCES</span>
+        <h2>Identidad institucional y cultural</h2>
+        <p>
+            Conoce los elementos que representan nuestra institución
+            y la riqueza cultural del estado de Tamaulipas.
+        </p>
+    </div>
+
+    <div class="rejilla dos-columnas">
+
+        <!-- TARJETA IDENTIDAD ITACE -->
+        <article class="tarjeta identidad-tarjeta">
+            <img
+                src="ITACEEE.jpg"
+                alt="Escudo del ITACE"
+                loading="lazy"
+            >
+
+            <div class="tarjeta-cuerpo">
+                <span class="sobrelinea">NUESTRA INSTITUCIÓN</span>
+                <h3>Identidad del ITACE</h3>
+
+                <p>
+                    El Instituto Tamaulipeco de Capacitación para el
+                    Empleo (ITACE) forma parte de la educación técnica
+                    en Tamaulipas. Su comunidad está integrada por
+                    estudiantes, docentes y personal que contribuyen
+                    a la formación académica y profesional.
+                </p>
+
+                <h4>Valores y sentido de pertenencia</h4>
+                <p>
+                    La lealtad, el honor y el trabajo representan
+                    valores relacionados con la identidad institucional.
+                    La convivencia, el respeto y la participación
+                    fortalecen el orgullo de pertenecer al ITACE.
+                </p>
             </div>
+        </article>
 
-            <div class="rejilla dos-columnas">
-                <article class="tarjeta">
-                    <h3>Identidad del ITACE</h3>
-                    <p>
-                        Este espacio puede utilizarse para explicar el significado
-                        del escudo, los valores y las tradiciones institucionales.
-                    </p>
-                </article>
+        <!-- TARJETA IDENTIDAD TAMAULIPAS -->
+        <article class="tarjeta identidad-tarjeta">
+            <img
+                src="TAMAULIPAS.png"
+                alt="Paisaje representativo de Tamaulipas"
+                loading="lazy"
+            >
 
-                <article class="tarjeta">
-                    <h3>Identidad de Tamaulipas</h3>
-                    <p>
-                        Presenta información cultural del estado y su relación
-                        con la comunidad educativa.
-                    </p>
-                </article>
+            <div class="tarjeta-cuerpo">
+                <span class="sobrelinea">NUESTRO ESTADO</span>
+                <h3>Identidad de Tamaulipas</h3>
+
+                <p>
+                    Tamaulipas es un estado con una gran diversidad
+                    cultural, histórica y natural. Su ubicación
+                    fronteriza y sus distintas regiones han dado
+                    origen a tradiciones que forman parte de la
+                    identidad de sus habitantes.
+                </p>
+
+                <h4>Cultura y tradiciones</h4>
+                <p>
+                    La música huasteca, el huapango, la gastronomía,
+                    las festividades y los paisajes naturales son
+                    expresiones representativas del estado.
+                    Conocerlas permite valorar nuestras raíces
+                    y fortalecer el sentido de pertenencia.
+                </p>
             </div>
-        </section>
+        </article>
 
+    </div>
+
+    <div class="bloque-destacado">
+        <h3>Una identidad que nos une</h3>
+        <p>
+            Como comunidad educativa del ITACE Plantel Reynosa,
+            reconocer nuestra identidad institucional y cultural
+            nos permite valorar nuestras raíces, preservar nuestras
+            tradiciones y construir un sentido de pertenencia.
+        </p>
+    </div>
+</section>
         <!-- 13. AUDIO: SECCIÓN INDEPENDIENTE -->
         <section class="seccion" id="audio">
             <div class="encabezado-seccion">
@@ -659,17 +927,17 @@
 
             <div class="rejilla tres-columnas galeria" id="rejilla-galeria">
                 <figure class="foto" data-categoria="instalaciones">
-                    <img src="imagenes/AULAS.jpg" alt="Aulas del plantel" loading="lazy">
+                    <img src="AULAS.jpg" alt="Aulas del plantel" loading="lazy">
                     <figcaption>Espacios de aprendizaje</figcaption>
                 </figure>
 
                 <figure class="foto" data-categoria="actividades">
-                    <img src="imagenes/futbool.jpg" alt="Actividad escolar" loading="lazy">
+                    <img src="futbool.jpg" alt="Actividad escolar" loading="lazy">
                     <figcaption>Actividades estudiantiles</figcaption>
                 </figure>
 
                 <figure class="foto" data-categoria="proyectos">
-                    <img src="imagenes/proyecto.jpg" alt="Trabajo de desarrollo web" loading="lazy">
+                    <img src="proyecto.jpg" alt="Trabajo de desarrollo web" loading="lazy">
                     <figcaption>Proyectos escolares</figcaption>
                 </figure>
             </div>
@@ -703,47 +971,159 @@
             </div>
         </section>
 
-        <!-- 16. PREGUNTAS FRECUENTES -->
-        <section class="seccion fondo-suave" id="preguntas">
-            <div class="encabezado-seccion">
-                <span class="sobrelinea">14 · DUDAS COMUNES</span>
-                <h2>Preguntas frecuentes</h2>
+        
+<!-- 16. PREGUNTAS FRECUENTES -->
+<section class="seccion fondo-suave" id="preguntas">
+
+    <div class="encabezado-seccion">
+        <span class="sobrelinea">CENTRO DE AYUDA</span>
+        <h2>Preguntas frecuentes</h2>
+        <p>
+            Encuentra respuestas a las dudas más comunes sobre
+            nuestro proyecto académico y la información del plantel.
+        </p>
+    </div>
+
+    <div class="preguntas-contenedor">
+
+        <!-- PREGUNTA 1 -->
+        <details class="pregunta-item">
+            <summary>
+                <span class="pregunta-numero">01</span>
+                <span class="pregunta-texto">
+                    ¿Este es el sitio oficial del ITACE?
+                </span>
+                <span class="pregunta-icono"></span>
+            </summary>
+
+            <div class="respuesta">
+                <p>
+                    No. Esta página es una propuesta académica
+                    elaborada para el proyecto ITACE Digital 4.0
+                    del Plantel Reynosa. Su finalidad es presentar
+                    información educativa mediante un sitio web.
+                </p>
             </div>
+        </details>
 
-            <div class="preguntas">
-                <details>
-                    <summary>¿Este es el sitio oficial del ITACE?</summary>
-                    <p>
-                        No. Es una propuesta académica elaborada
-                        para el proyecto ITACE Digital 4.0.
-                    </p>
-                </details>
+        <!-- PREGUNTA 2 -->
+        <details class="pregunta-item">
+            <summary>
+                <span class="pregunta-numero">02</span>
+                <span class="pregunta-texto">
+                    ¿Dónde puedo consultar los requisitos de admisión?
+                </span>
+                <span class="pregunta-icono"></span>
+            </summary>
 
-                <details>
-                    <summary>¿Dónde consulto los requisitos de admisión?</summary>
-                    <p>
-                        Consulta los medios oficiales del ITACE
-                        para obtener información vigente.
-                    </p>
-                </details>
-
-                <details>
-                    <summary>¿Cómo puedo conocer las carreras disponibles?</summary>
-                    <p>
-                        Revisa la sección de oferta educativa y confirma
-                        la disponibilidad con el plantel.
-                    </p>
-                </details>
-
-                <details>
-                    <summary>¿Cómo se agregan docentes al directorio?</summary>
-                    <p>
-                        Se incorporan al archivo datos/docentes.json
-                        con información autorizada.
-                    </p>
-                </details>
+            <div class="respuesta">
+                <p>
+                    Para conocer los requisitos, fechas y
+                    procedimientos de inscripción, consulta
+                    directamente los medios oficiales del ITACE
+                    o comunícate con el plantel correspondiente.
+                </p>
             </div>
-        </section>
+        </details>
+
+        <!-- PREGUNTA 3 -->
+        <details class="pregunta-item">
+            <summary>
+                <span class="pregunta-numero">03</span>
+                <span class="pregunta-texto">
+                    ¿Cómo puedo conocer las carreras disponibles?
+                </span>
+                <span class="pregunta-icono"></span>
+            </summary>
+
+            <div class="respuesta">
+                <p>
+                    Puedes consultar nuestra sección de Oferta
+                    Educativa para conocer las áreas de formación
+                    técnica presentadas en este proyecto.
+                    La disponibilidad debe confirmarse directamente
+                    con el plantel.
+                </p>
+            </div>
+        </details>
+
+        <!-- PREGUNTA 4 -->
+        <details class="pregunta-item">
+            <summary>
+                <span class="pregunta-numero">04</span>
+                <span class="pregunta-texto">
+                    ¿Cómo se agregan docentes al directorio?
+                </span>
+                <span class="pregunta-icono"></span>
+            </summary>
+
+            <div class="respuesta">
+                <p>
+                    El directorio se actualiza mediante el archivo
+                    datos/docentes.json. La información debe ser
+                    revisada y autorizada antes de incorporarse
+                    al sitio.
+                </p>
+            </div>
+        </details>
+
+        <!-- PREGUNTA 5 -->
+        <details class="pregunta-item">
+            <summary>
+                <span class="pregunta-numero">05</span>
+                <span class="pregunta-texto">
+                    ¿Puedo consultar las instalaciones del plantel?
+                </span>
+                <span class="pregunta-icono"></span>
+            </summary>
+
+            <div class="respuesta">
+                <p>
+                    Sí. En la sección de Instalaciones encontrarás
+                    fotografías y contenido descriptivo de los
+                    espacios educativos incluidos en esta propuesta.
+                </p>
+            </div>
+        </details>
+
+        <!-- PREGUNTA 6 -->
+        <details class="pregunta-item">
+            <summary>
+                <span class="pregunta-numero">06</span>
+                <span class="pregunta-texto">
+                    ¿Dónde puedo encontrar las noticias y eventos?
+                </span>
+                <span class="pregunta-icono"></span>
+            </summary>
+
+            <div class="respuesta">
+                <p>
+                    Puedes visitar las secciones de Noticias y Eventos
+                    para consultar las publicaciones y actividades
+                    presentadas en el proyecto académico.
+                </p>
+            </div>
+        </details>
+
+    </div>
+
+    <!-- AYUDA ADICIONAL -->
+    <div class="preguntas-ayuda">
+        <div>
+            <span class="sobrelinea">¿NECESITAS MÁS INFORMACIÓN?</span>
+            <h3>Estamos para orientarte</h3>
+            <p>
+                Consulta la sección de contacto para conocer
+                los medios de comunicación del plantel.
+            </p>
+        </div>
+
+        <a href="#contacto" class="boton-preguntas">
+            Ir a contacto →
+        </a>
+    </div>
+
+</section>
 
         <!-- 17. CONTACTO Y CRÉDITOS -->
         <section class="seccion" id="contacto">
@@ -778,13 +1158,8 @@
                     <h3>Créditos</h3>
                     <p>
                         Proyecto académico elaborado con HTML, CSS y JavaScript,
-                        con apoyo de herramientas digitales. Las fotografías,
-                        audios, videos y datos deben contar con autorización
-                        para su uso.
-                    </p>
-                    <p>
-                        <strong>Autoría:</strong>
-                        agrega los nombres autorizados del equipo.
+                        con apoyo de herramientas digitales como Inteligencia Artificial. Las fotografías,
+                        audios, videos y datos están autorizados para su uso.
                     </p>
                 </article>
             </div>
