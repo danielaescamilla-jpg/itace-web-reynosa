@@ -4,11 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
     iniciarFiltrosGaleria();
     iniciarVisorImagenes();
     iniciarBuscadorDocentes();
+    iniciarNoticias();
+    iniciarControlMultimedia();
 });
 
-/* ========================================
+/* =====================================
    1. MENÚ DE NAVEGACIÓN
-======================================== */
+===================================== */
 
 function iniciarMenu() {
     const boton = document.getElementById("menu-boton");
@@ -24,32 +26,38 @@ function iniciarMenu() {
             "aria-label",
             abierto ? "Cerrar menú" : "Abrir menú"
         );
+
+        boton.textContent = abierto ? "✕" : "☰";
     });
 
     navegacion.querySelectorAll("a").forEach(enlace => {
         enlace.addEventListener("click", () => {
             navegacion.classList.remove("activo");
+
             boton.setAttribute("aria-expanded", "false");
             boton.setAttribute("aria-label", "Abrir menú");
+            boton.textContent = "☰";
         });
     });
 }
 
-/* ========================================
+
+/* =====================================
    2. AÑO AUTOMÁTICO DEL PIE DE PÁGINA
-======================================== */
+===================================== */
 
 function actualizarAnio() {
-    const elementoAnio = document.getElementById("anio");
+    const anio = document.getElementById("anio");
 
-    if (elementoAnio) {
-        elementoAnio.textContent = new Date().getFullYear();
+    if (anio) {
+        anio.textContent = new Date().getFullYear();
     }
 }
 
-/* ========================================
+
+/* =====================================
    3. FILTROS DE LA GALERÍA
-======================================== */
+===================================== */
 
 function iniciarFiltrosGaleria() {
     const botones = document.querySelectorAll("[data-filtro]");
@@ -77,9 +85,10 @@ function iniciarFiltrosGaleria() {
     });
 }
 
-/* ========================================
+
+/* =====================================
    4. VISOR DE IMÁGENES
-======================================== */
+===================================== */
 
 function iniciarVisorImagenes() {
     const visor = document.getElementById("visor-imagen");
@@ -117,9 +126,10 @@ function iniciarVisorImagenes() {
     });
 }
 
-/* ========================================
-   5. BUSCADOR DEL DIRECTORIO DOCENTE
-======================================== */
+
+/* =====================================
+   5. BUSCADOR DE DOCENTES
+===================================== */
 
 function iniciarBuscadorDocentes() {
     const buscador = document.getElementById("buscarDocente");
@@ -147,12 +157,9 @@ function iniciarBuscadorDocentes() {
 
         tarjetas.forEach(tarjeta => {
             const datos = tarjeta.dataset.busqueda || "";
-            const textoTarjeta = tarjeta.textContent || "";
+            const texto = tarjeta.textContent || "";
 
-            const contenido = normalizar(
-                datos + " " + textoTarjeta
-            );
-
+            const contenido = normalizar(datos + " " + texto);
             const coincide = contenido.includes(termino);
 
             tarjeta.hidden = !coincide;
@@ -179,30 +186,112 @@ function iniciarBuscadorDocentes() {
     buscarDocentes();
 }
 
- // 7. Evitar que los videos mezclen sus sonidos
-document.addEventListener("DOMContentLoaded", function () {
-    const videos = document.querySelectorAll("video");
+
+/* =====================================
+   6. FILTROS Y CONTENIDO DE NOTICIAS
+===================================== */
+
+function iniciarNoticias() {
+    const filtros = document.querySelectorAll(".filtro-noticia");
+    const tarjetas = document.querySelectorAll(".tarjeta-noticia");
+
+    filtros.forEach(filtro => {
+        filtro.addEventListener("click", () => {
+            const categoria = filtro.dataset.categoria;
+
+            filtros.forEach(boton => {
+                boton.classList.remove("activo");
+            });
+
+            filtro.classList.add("activo");
+
+            tarjetas.forEach(tarjeta => {
+                const coincide =
+                    categoria === "todas" ||
+                    tarjeta.dataset.categoria === categoria;
+
+                tarjeta.classList.toggle("oculta", !coincide);
+            });
+        });
+    });
+
+    document.querySelectorAll(".boton-noticia").forEach(boton => {
+        boton.addEventListener("click", () => {
+            const tarjeta = boton.closest(".tarjeta-noticia");
+
+            if (!tarjeta) return;
+
+            const contenido = tarjeta.querySelector(".texto-completo");
+
+            if (!contenido) return;
+
+            contenido.hidden = !contenido.hidden;
+
+            boton.textContent = contenido.hidden
+                ? "Leer noticia"
+                : "Cerrar noticia";
+
+            boton.setAttribute(
+                "aria-expanded",
+                String(!contenido.hidden)
+            );
+        });
+    });
+}
+
+
+/* =====================================
+   7. CONTROL DE AUDIO Y VIDEOS
+===================================== */
+
+function iniciarControlMultimedia() {
+    const elementos = document.querySelectorAll("audio, video");
+
     const musica = document.getElementById("musicaFondo");
     const botonMusica = document.getElementById("botonMusica");
 
-    videos.forEach(function (videoActual) {
-        videoActual.addEventListener("play", function () {
-
-            // Pausar los demás videos
-            videos.forEach(function (otroVideo) {
-                if (otroVideo !== videoActual) {
-                    otroVideo.pause();
+    // Evita que dos audios o videos se reproduzcan al mismo tiempo.
+    elementos.forEach(elementoActual => {
+        elementoActual.addEventListener("play", () => {
+            elementos.forEach(otroElemento => {
+                if (otroElemento !== elementoActual) {
+                    otroElemento.pause();
                 }
             });
 
-            // Pausar la música de fondo para evitar mezclar sonidos
-            if (musica && !musica.paused) {
-                musica.pause();
-
-                if (botonMusica) {
-                    botonMusica.textContent = "▶ Música";
-                }
-            }
+            actualizarBotonMusica();
         });
     });
-});
+
+    // Botón para reproducir o pausar la música.
+    if (musica && botonMusica) {
+        botonMusica.addEventListener("click", async () => {
+            if (musica.paused) {
+                try {
+                    await musica.play();
+                } catch (error) {
+                    console.error(
+                        "No se pudo reproducir la música:",
+                        error
+                    );
+                }
+            } else {
+                musica.pause();
+            }
+
+            actualizarBotonMusica();
+        });
+
+        musica.addEventListener("play", actualizarBotonMusica);
+        musica.addEventListener("pause", actualizarBotonMusica);
+        musica.addEventListener("ended", actualizarBotonMusica);
+    }
+
+    function actualizarBotonMusica() {
+        if (!musica || !botonMusica) return;
+
+        botonMusica.textContent = musica.paused
+            ? "▶ Música"
+            : "⏸ Pausar música";
+    }
+}
